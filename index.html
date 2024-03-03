@@ -16,18 +16,16 @@
 
 <body>
     <div class="main-container">
-        <header> 
+        <header>
+            <div class="logo"> <!-- deux div c pas ok car ils sont sur 2 niveau diff, mais c'est pratique pour dimensionner l'image ... -->
+                <a href="#"> <!-- logo+h1+lien -->
+                    <img src="./images/logo/Booki.png" alt="Logo du site Booki" /></a><!-- H1 dans le logo, ou, dans Trouvez votre hébergement... en H1 réduit en taille -->
+            </div>
             <nav>
-                <div class="logo"> <!-- deux div c pas ok car ils sont sur 2 niveau diff, mais c'est pratique pour dimensionner l'image ... -->
-                <h1><a href="#"> <!-- logo+h1+lien -->
-                    <img src="./images/logo/Booki.png" alt="Logo du site Booki" /></a></h1> <!-- H1 dans le logo, ou, dans Trouvez votre hébergement... en H1 réduit en taille -->
-                </div>
-                <div> 
-                    <ul class="liennav" style="list-style-type: none"> <!-- none: retirer les puces de la liste -->
-                        <li><a href="#">Hébergements</a></li>
-                        <li><a href="#">Activités</a></li>
-                    </ul>
-                </div>
+                <ul class="liennav" style="list-style-type: none"> <!-- none: retirer les puces de la liste -->
+                    <li class="hebergements"><a href="#">Hébergements</a></li>
+                    <li class="activites"><a href="#">Activités</a></li>
+                </ul>
             </nav>
         </header>
         <main>

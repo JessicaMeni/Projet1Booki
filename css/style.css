@@ -59,15 +59,18 @@ a {
 }
 
 /****** Logo et navigation ******/
-.logo img{ /* reduction de taille du logo*/
-    width : 61.09px;
-    height: 19px;
+header {
     display: flex;
 }
-.liennav {
+.logo img { /* reduction de taille du logo*/
+    width : 61.09px;
+    height: 19px;
+    padding: 30px 50px 30px 0px;
+}
+ul.liennav {
     display: flex;
-    /* flex-direction: row;
-    justify-content: flex-end; */
+    justify-content: flex-end;
+    gap: 68px;
 }
 
 /****** Hebergements And Populaires ***********/
