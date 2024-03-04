@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
 
 :root {
@@ -21,7 +22,7 @@ body {
 .main-container { /*du header jusqu'après le footer */
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 50px; /*ajout d'un padding a gauche droite de tout body */
     box-sizing: border-box;
 }
 
@@ -61,16 +62,29 @@ a {
 /****** Logo et navigation ******/
 header {
     display: flex;
+    justify-content: space-between; /* pourquoi il fonctionne ici et nulle par ailleur, */
 }
 .logo img { /* reduction de taille du logo*/
     width : 61.09px;
     height: 19px;
     padding: 30px 50px 30px 0px;
 }
-ul.liennav {
+ul.liennav { /* ul tout seul fonctionnerai ? */
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* ne sert a rien, pourquoi il n'irai pas à droite*/
     gap: 68px;
+    
+}
+@media screen and (min-width: 768px) { /*largeur min 768px pour border-top bleu */
+    nav li:hover {
+        border-top: 2px #0065FC solid;
+    }
+}
+li {
+    font-size: 16px;
+    text-align : center;
+    padding-top: 11px;
+    border-top: 2px #F2F2F2 solid; /*obligée de garder solid, sinon texte saute */
 }
 
 /****** Hebergements And Populaires ***********/
