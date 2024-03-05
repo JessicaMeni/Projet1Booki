@@ -31,7 +31,7 @@ a {
     text-decoration: none;
 }
 
-.section-title {
+.section-title { /*les h2/ */
     margin: 0;
     font-size: 22px;
 }
@@ -48,7 +48,7 @@ a {
 }
 
 .card-title {
-    font-size: 16px;
+    font-size: 16px; /* h3 */
 }
 
 .euro {
@@ -104,6 +104,32 @@ li {
 .hebergements {
     width: 65%;
 }
+.hebergements-title { /* le h2 hebergements a Marseille. sert a qlq chose ce selecteur? */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.hebergements-presentation .presentation {
+    display: flex;
+    margin-top: 33px;
+}
+.hebergements-presentation img {
+    height: 124px;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    border-radius: 20px 20px 20px 20px;
+    border: 5px #FFFFFF solid;
+}
+.presentation .card-content { /*  class="card" chez pop*/
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
 
 /****** Populaires ***********/
 .populaires {
@@ -116,7 +142,7 @@ li {
     align-items: center;
 }
 
-.populaires-cards .card {
+.populaires-cards .card { /*peut on utiliser à la place -pop-cards .article { ? */
     display: flex;
     margin-top: 33px;
 }
