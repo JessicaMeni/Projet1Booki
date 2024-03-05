@@ -50,6 +50,9 @@ a {
 .card-title {
     font-size: 16px; /* h3 */
 }
+/* p {
+    font-size: 16px; je dois donner cette taille, 
+}ou laisser l'utilisateur avec sa taille choisi avec son navigateur ? */
 
 .euro {
     font-weight: 700;
@@ -86,6 +89,38 @@ li {
     padding-top: 11px;
     border-top: 2px #F2F2F2 solid; /*obligée de garder solid, sinon texte saute */
 }
+
+/****** Trouvez votre hébergement ******/
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    height: 49px;
+    /*width: 377px; */
+    margin: 50px;
+}
+.search-bar localisation {
+    background-color: var(--main-bg-color);
+    width: 50px;
+    border : 1px var(--main-bg-color) solid;
+    border-radius: 15px 0px 0px 15px;
+
+}
+.search-bar input {
+    height: 100%;
+    border : 1px var(--main-bg-color) solid;
+}
+#rechercher {
+    box-sizing: content-box;
+    height: 100%;
+    width: 132px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
