@@ -95,10 +95,11 @@ li {
     display: flex;
     flex-direction: row;
     height: 49px;
-    /*width: 377px; */
+    width: 377px;
     margin: 50px;
+    background-color: bisque;
 }
-.search-bar localisation {
+.localisation {
     background-color: var(--main-bg-color);
     width: 50px;
     border : 1px var(--main-bg-color) solid;
@@ -108,8 +109,11 @@ li {
 .search-bar input {
     height: 100%;
     border : 1px var(--main-bg-color) solid;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
-#rechercher {
+.bouton-rechercher-desktop {
     box-sizing: content-box;
     height: 100%;
     width: 132px;
