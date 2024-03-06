@@ -90,7 +90,7 @@ li {
     border-top: 2px #F2F2F2 solid; /*obligée de garder solid, sinon texte saute */
 }
 
-/****** Trouvez votre hébergement ******/
+/****** Accueil & Search ******/
 .info-group{
     margin-top: 30px;
     margin-bottom: 30px;
@@ -106,35 +106,42 @@ form {
     display: flex;
     flex-direction: row;
     height: 49px;
+    width: 377px;
+    border : 1px var(--main-bg-color) solid;
+    border-radius: 15px;
 }
 .bouton-localisation {
     background-color: var(--main-bg-color);
     width: 50px;
-    border : 1px var(--main-bg-color) solid;
+    border : none;
     border-radius: 15px 0px 0px 15px;
 }
-
 .fa-location-dot {
     vertical-align: middle;
     color: black;
     font-size: 18px;
 }
+
 .search-bar input {
-    width: 195px;
-    border : 1px var(--main-bg-color) solid;
+    width: 189px; /* si je mets 195px , il sera en realité à 201px pq?*/
+    border : none;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
 }
+
 .bouton-rechercher-desktop {
     box-sizing: content-box;
     background-color: var(--main-color);
     width: 132px;
-    border: 1px var(--main-color) solid;
+    border: none;
     border-radius: 0px 15px 15px 0px;
     font-size: 18px;
     font-weight: 700;
     color: #FFFFFF;
+}
+.bouton-loupe { /* version mobile*/
+    display: none;
 }
 
 
@@ -269,4 +276,42 @@ form {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+
+/****** Logo et navigation ******/
+header {
+    flex-direction: column;
+}
+ul.liennav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-container {
+    padding: 0px 20px;
+}
+
+form {
+    width: 335px;
+}
+.search-bar input {
+    width: 232px;
+}
+
+.bouton-rechercher-desktop {
+    display: none;
+}
+.bouton-loupe {
+    display: flex; /* pour faire reaparaitre le display: none*/
+    background-color: var(--main-color);
+    width: 49px;
+    border: none;
+    border-radius: 15px;
+}
+.fa-magnifying-glass {
+    vertical-align: middle;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
 }
