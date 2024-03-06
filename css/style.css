@@ -5,9 +5,9 @@
 }
 
 :root {
-    --main-color: #0065FC;
+    --main-color: #0065FC; /* bleu */
     --main-bg-color: #F2F2F2; /* couleur du background gris */
-    --filter-bg-color: #DEEBFF;
+    --filter-bg-color: #DEEBFF; /* bleu pastel */
 }
 
 .fa-solid {
@@ -91,23 +91,36 @@ li {
 }
 
 /****** Trouvez votre hébergement ******/
+.info-group{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.info-title p {
+    line-height: 44.61px;
+}
 .search-bar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+form {
     display: flex;
     flex-direction: row;
     height: 49px;
-    width: 377px;
-    margin: 50px;
-    background-color: bisque;
 }
-.localisation {
+.bouton-localisation {
     background-color: var(--main-bg-color);
     width: 50px;
     border : 1px var(--main-bg-color) solid;
     border-radius: 15px 0px 0px 15px;
+}
 
+.fa-location-dot {
+    vertical-align: middle;
+    color: black;
+    font-size: 18px;
 }
 .search-bar input {
-    height: 100%;
+    width: 195px;
     border : 1px var(--main-bg-color) solid;
     font-size: 18px;
     font-weight: bold;
@@ -115,13 +128,12 @@ li {
 }
 .bouton-rechercher-desktop {
     box-sizing: content-box;
-    height: 100%;
-    width: 132px;
     background-color: var(--main-color);
-    border: none;
+    width: 132px;
+    border: 1px var(--main-color) solid;
     border-radius: 0px 15px 15px 0px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     color: #FFFFFF;
 }
 
@@ -163,7 +175,6 @@ li {
 .presentation .card-content { /*  class="card" chez pop*/
     padding-left: 15px;
     padding-right: 15px;
-    background-color: bisque;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
