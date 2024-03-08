@@ -72,22 +72,27 @@ header {
     height: 19px;
     padding: 30px 50px 30px 0px;
 }
-ul.liennav { /* ul tout seul fonctionnerai ? */
+.liennav {
     display: flex;
-    justify-content: flex-end; /* ne sert a rien, pourquoi il n'irai pas à droite*/
-    gap: 68px;
-    
+    list-style-type: none;
+    padding-left: 0px;
 }
+
 @media screen and (min-width: 768px) { /*largeur min 768px pour border-top bleu */
     nav li:hover {
         border-top: 2px #0065FC solid;
     }
-}
-li {
-    font-size: 16px;
-    text-align : center;
-    padding-top: 11px;
-    border-top: 2px #F2F2F2 solid; /*obligée de garder solid, sinon texte saute */
+    .liennav {
+    gap: 68px;
+    }
+    
+    .lien-hebergements, .lien-activites {
+        font-size: 16px;
+        text-align : center;
+        padding-top: 11px;
+        border-top: 2px #F2F2F2 solid; /*obligée de garder solid, sinon texte saute */
+    }
+
 }
 
 /****** Accueil & Search ******/
@@ -158,7 +163,8 @@ form {
 .filterchoix button {
     border: 2px #D9D9D9 solid;
     border-radius: 25px;
-    padding: 10px 19px 10px 19px;
+    padding: 13px 17px 13px 17px;
+    margin: 7px;
     background-color: #FFFFFF;
     font-size: 17px;
     font-weight: 700;
@@ -166,6 +172,9 @@ form {
 .filterchoix.i {
     padding-right: 5px;
     font-size: 22px;
+}
+.filterchoix span {
+    padding-left: 11px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -304,21 +313,30 @@ form {
 /****** Logo et navigation ******/
 header {
     flex-direction: column;
-}
-ul.liennav {
-    display: flex;
     justify-content: space-around;
+}
+.lien-hebergements, .lien-activites {
+        border-bottom: 2px #F2F2F2 solid; /*obligée de garder solid, sinon texte saute */
+        border-top: none;
+    }
+ul.liennav {
+    justify-content: space-evenly;
+}
+
+nav li:hover {
+    border-bottom: 2px #0065FC solid;
 }
 
 .main-container {
     padding: 0px 20px;
 }
 
+/****** Accueil & Search ******/
 form {
     width: 335px;
 }
 .search-bar input {
-    width: 232px;
+    width: 335px;
 }
 
 .bouton-rechercher-desktop {
@@ -332,8 +350,10 @@ form {
     border-radius: 15px;
 }
 .fa-magnifying-glass {
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    flex: auto;
     color: #FFFFFF;
     font-size: 18px;
 }
