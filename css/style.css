@@ -50,9 +50,6 @@ a {
 .card-title {
     font-size: 16px; /* h3 */
 }
-/* p {
-    font-size: 16px; je dois donner cette taille, 
-}ou laisser l'utilisateur avec sa taille choisi avec son navigateur ? */
 
 .euro {
     font-weight: 700;
@@ -78,10 +75,10 @@ header {
     padding-left: 0px;
 }
 
-@media screen and (min-width: 768px) { /*largeur min 768px pour border-top bleu */
-    nav li:hover {
-        border-top: 2px #0065FC solid;
-    }
+    @media screen and (min-width: 768px) { /*largeur min 768px pour border-top bleu */
+        nav li:hover {
+            border-top: 2px #0065FC solid;
+        }
     .liennav {
     gap: 68px;
     }
@@ -126,7 +123,6 @@ form {
     color: black;
     font-size: 18px;
 }
-
 .search-bar input {
     width: 189px; /* si je mets 195px , il sera en realité à 201px pq?*/
     border : none;
@@ -135,7 +131,6 @@ form {
     text-align: left;
     text-indent: 24px;
 }
-
 .bouton-rechercher-desktop {
     box-sizing: content-box;
     background-color: var(--main-color);
@@ -152,33 +147,52 @@ form {
 
 /****** Filtres ******/
 
-}
-.filterchoix p {
+.filter-master p {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 13px;
-    margin-left: 10px;
+    margin-right: 15px;
 }
 .filterchoix button {
     border: 2px #D9D9D9 solid;
     border-radius: 25px;
     padding: 13px 17px 13px 17px;
-    margin: 7px;
+    margin: 15px 15px 15px 0px;
     background-color: #FFFFFF;
-    font-size: 17px;
-
+    
 }
-.filterchoix.i {
-    padding-right: 5px;
-    font-size: 22px;
+.filterchoix i {
+    font-size: 20px;
 }
 .filterchoix span {
     padding-left: 11px;
+    padding-right: 5px;
     font-weight: 700;
+    font-size: 17px;
+}
+.filterchoix button:hover {
+    background-color: var(--filter-bg-color);
+}
+
+.search-info {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+}
+.fa-info {
+    padding: 6px 9px 6px 9px;
+    border: 1px #D9D9D9 solid;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 10px;
+}
+.search-info-p {
+    width: auto;
 }
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
+    margin-top: 25px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
 }
@@ -193,22 +207,14 @@ form {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    margin: 0px;
 }
-.hebergements-title { /* le h2 hebergements a Marseille. sert a qlq chose ce selecteur? */
+.hebergements-presentation {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-}
-
-.hebergements-presentation .presentation {
-    display: flex;
-    margin-top: 33px;
 }
 .hebergements-presentation img {
     height: 124px;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     border: 5px #FFFFFF solid;
 }
 .presentation .card-content { /*  class="card" chez pop*/
@@ -274,15 +280,20 @@ form {
 /****** Media queries ***********/
 /* Medium devices (dekstop more than 1024px) */
 @media (min-width: 1024px) {
-/****** Filtres ******/
-.filterchoix p {
-    display: inline;
-}
+    /****** Filtres ******/
+    .filter-master {
+        display: flex;
+        align-items: center;
+    }
+    .hebergements {
+        display: flex;
+    }
 
 }
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -320,59 +331,60 @@ form {
 @media (max-width: 767.98px) {
     /* ... */
 
-/****** Logo et navigation ******/
-header {
-    flex-direction: column;
-    justify-content: space-around;
-}
-.lien-hebergements, .lien-activites {
-        border-bottom: 2px #F2F2F2 solid; /*obligée de garder solid, sinon texte saute */
-        border-top: none;
+    /****** Logo et navigation ******/
+    header {
+        flex-direction: column;
+        justify-content: space-around;
     }
-ul.liennav {
-    justify-content: space-evenly;
-}
+    .lien-hebergements, .lien-activites {
+            border-bottom: 2px #F2F2F2 solid; /*obligée de garder solid, sinon texte saute */
+            border-top: none;
+        }
+    ul.liennav {
+        justify-content: space-evenly;
+    }
 
-nav li:hover {
-    border-bottom: 2px #0065FC solid;
-}
+    nav li:hover {
+        border-bottom: 2px #0065FC solid;
+    }
 
-.main-container {
-    padding: 0px 20px;
-}
+    .main-container {
+        padding: 0px 20px;
+    }
 
-/****** Accueil & Search ******/
-form {
-    width: 335px;
-}
+    /****** Accueil & Search ******/
+    form {
+        width: 335px;
+    }
 
-.search-bar input {
-    width: 232px;
-}
+    .search-bar input {
+        width: 232px;
+    }
 
-.bouton-rechercher-desktop {
-    display: none;
-}
-.bouton-loupe {
-    display: flex; /* pour faire reaparaitre le display: none*/
-    background-color: var(--main-color);
-    width: 49px;
-    border: none;
-    border-radius: 15px;
-}
-.fa-magnifying-glass {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: auto;
-    color: #FFFFFF;
-    font-size: 18px;
-}
+    .bouton-rechercher-desktop {
+        display: none;
+    }
+    .bouton-loupe {
+        display: flex; /* pour faire reaparaitre le display: none*/
+        background-color: var(--main-color);
+        width: 49px;
+        border: none;
+        border-radius: 15px;
+    }
+    .fa-magnifying-glass {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: auto;
+        color: #FFFFFF;
+        font-size: 18px;
+    }
     /****** Filtres ******/
     .filterchoix {
-    /*display: flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; */
+    justify-content: space-around; 
+    }
     .filterchoix button {
         width: 45%;
         padding: 13px 0px 13px 0px;
