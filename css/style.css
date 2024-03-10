@@ -218,9 +218,7 @@ form {
 }
 .hebergements-presentation a {
 }
-.presentation {
-    background-color: #FFFFFF;
-    border-radius: 20px;
+.hebergements-presentation .card {
     width: 250px;
 }
 
@@ -228,7 +226,6 @@ form {
 .hebergements-presentation img {
     width: 96%;
     height: 110px;
-    object-fit: cover; /* img dimensionné pr maintenir son ratio le reste rogné*/
     border: 5px #FFFFFF solid;
     border-radius: 20px 20px 0px 0px;
 }
