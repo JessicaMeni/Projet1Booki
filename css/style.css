@@ -32,7 +32,7 @@ a {
 }
 
 .section-title { /*les h2/ */
-    margin: 0;
+    margin-top: 10px;
     font-size: 22px;
 }
 
@@ -199,7 +199,7 @@ form {
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 30px;
     box-sizing: border-box;
 }
@@ -211,11 +211,37 @@ form {
 }
 .hebergements-presentation {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 33px;
+    margin-bottom: 33px;
+    gap: 30px;
 }
-.hebergements-presentation img {
-    height: 124px;
+.hebergements-presentation a {
+}
+.presentation {
+    background-color: #FFFFFF;
     border-radius: 20px;
+    width: 250px;
+}
+
+
+.hebergements-presentation img {
+    width: 96%;
+    height: 110px;
+    object-fit: cover; /* img dimensionné pr maintenir son ratio le reste rogné*/
     border: 5px #FFFFFF solid;
+    border-radius: 20px 20px 0px 0px;
+}
+.card-text {
+    padding: 0px 15px 8px 15px;
+}
+.card-text h3 {
+    padding-bottom: 8px;
+}
+.card-subtitle {
+    font-size:  14px;
+    font-weight: 400;
+    padding-bottom: 5px;
 }
 .presentation .card-content { /*  class="card" chez pop*/
     padding-left: 15px;
@@ -284,9 +310,6 @@ form {
     .filter-master {
         display: flex;
         align-items: center;
-    }
-    .hebergements {
-        display: flex;
     }
 
 }
