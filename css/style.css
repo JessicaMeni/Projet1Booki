@@ -211,14 +211,16 @@ form {
     width: 65%;
 }
 .hebergements-presentation {
-    margin-bottom: 33px;
+    margin: 33px 0px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 30px;
 }
 .hebergements-presentation .card {
     width: 241px;
-    margin-top: 33px;
+}
+.hebergements-presentation .card {
+
 }
 .hebergements-presentation .card-content { /*  class="card" chez pop*/
     padding-left: 15px;
@@ -372,6 +374,9 @@ form {
     .hebergements {
         width: 100%;
     }
+    .hebergements-presentation .card {
+    width: 259px;
+    }
 
     .populaires {
         width: 100%;
@@ -402,6 +407,11 @@ form {
 @media (max-width: 767.98px) {
     /* ... */
 
+    /****** Main container ******/
+    .main-container {
+        padding: 0px;
+    }
+
     /****** Logo et navigation ******/
     header {
         flex-direction: column;
@@ -419,11 +429,11 @@ form {
         border-bottom: 2px #0065FC solid;
     }
 
-    .main-container {
-        padding: 0px 20px;
+    /****** Accueil & Search ******/
+    .info-group {
+        padding: 20px;
     }
 
-    /****** Accueil & Search ******/
     form {
         width: 335px;
     }
@@ -450,7 +460,7 @@ form {
         color: #FFFFFF;
         font-size: 18px;
     }
-    /****** Filtres ******/
+    
     .filterchoix {
     display: flex;
     flex-wrap: wrap;
@@ -469,6 +479,10 @@ form {
     }
 
     /****** Hebergements And Populaires ***********/
+    
+    .hebergements-and-populaires section{
+        padding: 20px;
+    }
 
     /****** Hebergements ***********/
     .hebergements-presentation {
@@ -479,6 +493,9 @@ form {
     /****** Populaires ***********/
     .populaires-cards {
         flex-direction: column;
+    }
+    .populaires-cards a {
+        width: 100%;
     }
 
 }
